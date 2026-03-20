@@ -1,17 +1,76 @@
 <!DOCTYPE html>
-<html>
-<head><title>Registro</title></head>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .contenedor {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+            width: 300px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
 <body>
+
+<div class="contenedor">
     <h2>Registro</h2>
+
     <form>
-        Nombre: <input type="text"><br>
-        Tipo:
-        <select>
+        <input type="text" placeholder="Nombre" required>
+        <input type="text" placeholder="Apellido" required>
+        <select required>
+            <option value="">Seleccione tipo</option>
             <option>Alumno</option>
             <option>Profesor</option>
-        </select><br>
-        Email: <input type="email"><br>
-        <button>Registrar</button>
+        </select>
+
+        <input type="email" placeholder="Email" required>
+
+        <button type="submit">Registrar</button>
     </form>
+</div>
+
 </body>
 </html>
